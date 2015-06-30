@@ -21,4 +21,16 @@ module TestFactories
     }.merge(options)
     Item.create(item_options)
   end
+
+  def sign_in(user)
+    visit root_path
+
+    click_link 'Log In'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+
+    within 'form' do
+      click_button 'Log in'
+    end
+  end
 end

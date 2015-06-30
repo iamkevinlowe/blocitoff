@@ -1,8 +1,8 @@
-<td colspan="2">
-  <%= form_for [user, item], remote: true do |f| %>
+<%= form_for [user, item] do |f| %>
+  <td colspan="2">
     <%= f.text_field :description, class: 'form-control', placeholder: "Enter new task" %>
-    </td> <!-- Really weird indenting -->
-    <td>
+  </td>
+  <td class="text-center">
     <%= f.submit "Save", class: 'btn btn-success' %>
-  <% end %>
-</td>
+  </td>
+<% end %>
