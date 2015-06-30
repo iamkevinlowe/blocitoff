@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'devise'
+gem 'bootstrap-sass'
+gem 'pry-rails'
+gem 'figaro'
+gem 'sendgrid'
+gem 'faker'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -42,6 +48,8 @@ group :development do
 end
 
 group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
