@@ -6,6 +6,7 @@ gem 'pry-rails'
 gem 'figaro'
 gem 'sendgrid'
 gem 'faker'
+gem 'puma'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -49,6 +50,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
