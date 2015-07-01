@@ -11,7 +11,6 @@
   <div class="container">
     <ul class="nav nav-tabs">
       <li><%= link_to "Blocitoff", root_path %></li>
-      <li><%= link_to "About", about_path %></li>
 
       <div class="pull-right user-info">
         <% if current_user %>
@@ -47,6 +46,13 @@
     <% end %>
 
     <%= yield %>
+
+    <div class="footer text-center">
+      <p>
+        created by: Kevin Lowe
+        <a class="btn btn-primary" href="http://www.github.com/iamkevinlowe/blocitoff" role="button">Visit GitHub</a>
+      </p>
+</div>
       
   </div>
 

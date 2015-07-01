@@ -1,3 +1,4 @@
+<% @items.each{|item| item.delete_if_older_than_7_days} %>
 <%= content_tag :tr, id: "item-#{item.id}" do %>
   <td class="text-left"><%= item.description %></td>
   <td class="text-center"><%= item.days_left %></td>
