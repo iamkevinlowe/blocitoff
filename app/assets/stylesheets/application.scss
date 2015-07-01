@@ -24,3 +24,20 @@
 .nav {
   margin-right: 5px;
 }
+
+.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

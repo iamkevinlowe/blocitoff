@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resources :items, only: [:create, :destroy]
   end
   
-  get 'about' => 'welcome#about'
   root 'welcome#index'
 
 end

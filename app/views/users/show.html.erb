@@ -1,12 +1,11 @@
-<h2><%= @user.name %>'s To-Dos</h2>
-
 <div class="row">
-  <div class="col-md-8">
+  <h2 class="text-center"><%= @user.name %>'s To-Dos</h2>
+  <div class="col-md-8 center box">
     <table class="table table-hover">
       <thead>
-        <td>Task</td>
-        <td>Days left</td>
-        <td>Complete</td>
+        <td class="text-center"><h4>Task</h4></td>
+        <td class="text-center"><h4>Days left</h4></td>
+        <td class="text-center"><h4>Complete</h4></td>
       </thead>
       <tbody>
         <% if @items.any? %>

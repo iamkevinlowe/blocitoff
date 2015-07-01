@@ -1,5 +1,6 @@
-<tr>
-  <td><%= item.description %></td>
-  <td>TODO: calculate time remaining</td>
-  <td><%= link_to '&times;'.html_safe, [item.user, item], method: :delete, class: 'btn btn-danger', data: {confirm: 'Sure?'} %></td>
-</tr>
+<% @items.each{|item| item.delete_if_older_than_7_days} %>
+<%= content_tag :tr, id: "item-#{item.id}" do %>
+  <td class="text-left"><%= item.description %></td>
+  <td class="text-center"><%= item.days_left %></td>
+  <td class="text-center"><%= link_to '', [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
+<% end %>

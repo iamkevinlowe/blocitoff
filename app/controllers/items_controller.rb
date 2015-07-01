@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
     @item = @user.items.build(item_params)
 
     if @item.save
-      flash[:notice] = "New task created."
+      # flash[:notice] = "New task created."
     else
       flash[:error] = "There was an error creating the task. Please try again."
     end
@@ -15,11 +15,14 @@ class ItemsController < ApplicationController
     @user = User.find(params[:user_id])
     @item = Item.find(params[:id])
     if @item.destroy
-      flash[:notice] = "\"#{@item.description}\" has been removed."
+      # flash[:notice] = "\"#{@item.description}\" has been removed."
     else
       flash[:error] = "There was an error removing the task. Please try again."
     end
-    redirect_to @user
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private

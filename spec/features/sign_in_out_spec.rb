@@ -6,15 +6,7 @@ describe "Sign in and out flow" do
 
   before do
     @user = authenticated_user
-    visit root_path
-
-    click_link 'Log In'
-    fill_in 'Email', with: @user.email
-    fill_in 'Password', with: @user.password
-
-    within 'form' do
-      click_button 'Log in'
-    end
+    sign_in(@user)
   end    
 
   describe "top navaigation" do
